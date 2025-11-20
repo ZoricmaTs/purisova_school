@@ -64,9 +64,9 @@ export function Courses() {
 
   return <section style={{padding: '2.5rem'}} className={'courses-section'} ref={rootRef}>
     {courses.map((course: CourseType, index: number) => {
-      return <div className={'course'} key={`course-${course.id}`}>
+      return <div className={'course'} key={`course-${index}`}>
         <div className={'course__image-container'}>
-          <div className={'course__image'} style={{backgroundImage: `url(${index})`}} />
+          <div className={'course__image'} style={{backgroundImage: `url(${course.img})`}} />
         </div>
 
         <div className={'course__info-container'}>
