@@ -51,7 +51,7 @@ export function Navbar() {
   return <nav className={'navbar'}>
     <nav className={'navbar__container'}>
       <div style={{position: 'relative'}}>
-        <img className={'navbar__image'} src={'/images/1.svg'}/>
+        <img className={'navbar__image'} src={'images/1.svg'}/>
         <h2 className={'navbar__logo_title'}>{'FRISS SCHOOL'}</h2>
         <small className={'navbar__logo_description'}>{'школа кройки и шитья'}</small>
       </div>

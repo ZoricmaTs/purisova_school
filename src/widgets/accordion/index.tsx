@@ -94,6 +94,6 @@ export function Accordion({item}: {item: AccordionType} ) {
 
 export default function Accordions() {
   return <section>
-    {accordions.map((item: AccordionType) => <Accordion item={item} key={`accordion-${item.id}`}/>)}
+    {accordions.map((item: AccordionType, index: number) => <Accordion item={item} key={`accordion-${index}`}/>)}
   </section>
 }

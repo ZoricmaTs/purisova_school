@@ -63,10 +63,10 @@ export function Courses() {
   const rootRef = useScrollHider<HTMLDivElement>();
 
   return <section style={{padding: '2.5rem'}} className={'courses-section'} ref={rootRef}>
-    {courses.map((course: CourseType) => {
-      return <div className={'course'}>
+    {courses.map((course: CourseType, index: number) => {
+      return <div className={'course'} key={`course-${course.id}`}>
         <div className={'course__image-container'}>
-          <div className={'course__image'} style={{backgroundImage: `url(${course.img})`}} />
+          <div className={'course__image'} style={{backgroundImage: `url(${index})`}} />
         </div>
 
         <div className={'course__info-container'}>
