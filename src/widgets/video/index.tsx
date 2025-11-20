@@ -1,5 +1,5 @@
 import './style.scss'
-import {Pause, PlayCircle, SpeakerSimpleHigh, SpeakerSimpleSlash} from '@phosphor-icons/react';
+import {PauseIcon, PlayCircleIcon, SpeakerSimpleHighIcon, SpeakerSimpleSlashIcon} from '@phosphor-icons/react';
 import {useEffect, useRef, useState} from 'react';
 import {useScrollHider} from '../../hooks/scroll-observer.ts';
 
@@ -48,17 +48,17 @@ export function VideoSection() {
         Your browser does not support the video tag.
       </video>
       {isPaused && <button className={'video-section__button_play'} onClick={onClickPlay}>
-        <PlayCircle size={100} weight="fill" />
+        <PlayCircleIcon size={100} weight="fill" />
       </button>
       }
       <button className={'video-section__button_mute'} onClick={() => setMuted(!muted)}>
         {muted
-          ? <SpeakerSimpleSlash size={32} weight="fill"/>
-          : <SpeakerSimpleHigh size={32} weight="fill"/>
+          ? <SpeakerSimpleSlashIcon size={32} weight="fill"/>
+          : <SpeakerSimpleHighIcon size={32} weight="fill"/>
         }
       </button>
       {!isPaused && <button className={'video-section__button_pause'} onClick={onClickPause}>
-        <Pause size={32} weight="fill"/>
+        <PauseIcon size={32} weight="fill"/>
       </button>}
     </div>
     <div className={'video-section__info-container'}>

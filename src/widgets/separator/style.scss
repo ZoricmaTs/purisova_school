@@ -1,14 +1,14 @@
 .separator {
   width: 100%;
   max-width: 1440px;
-  margin: 6rem auto 4rem auto;
+  margin: 5rem auto 4rem auto;
   text-align: center;
 }
 
 @media (max-width: 1500px) {
   .separator {
     max-width: calc(100% - 2rem);
-    margin: 5rem auto 3rem auto;
+    margin: 4rem auto 3rem auto;
   }
 }
 

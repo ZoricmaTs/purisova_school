@@ -1,0 +1,39 @@
+.accordion {
+  width: 100%;
+  padding: 0.75rem 2.5rem;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--section-color);
+    border: none;
+    padding: 0.75rem 1rem;
+
+    &_title {
+      margin-left: 1rem;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    border: 3px solid var(--section-color);
+  }
+
+  &__inner {
+    padding: 1rem 2rem 2rem 2rem;
+  }
+}
+
+.accordion:hover .accordion__header {
+  background-color: var(--hover-color);
+}
+.accordion:hover .accordion__content {
+  border: 3px solid var(--hover-color);
+}

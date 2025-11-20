@@ -1,11 +1,12 @@
 import './style.scss'
 import {useScrollHider} from '../../hooks/scroll-observer.ts';
+import type {ReactNode} from 'react';
 
-export function Separator() {
+export function Separator({title, children}: {title: string, children?: ReactNode}) {
   const rootRef = useScrollHider<HTMLDivElement>();
 
   return <div className={'separator'} ref={rootRef}>
-    <h2 style={{color: 'var(--text-color)'}}>{'Оффлайн обучение '}</h2>
-    <p style={{color: 'var(--text-additional-color)', fontFamily: 'serif', letterSpacing: '0.2rem', whiteSpace: 'nowrap'}}>{'в FRISS SCHOOL'}</p>
+    <h2 style={{color: 'var(--text-color)'}}>{title}</h2>
+    {children}
   </div>
 }
