@@ -1,5 +1,5 @@
-import './style.scss'
-import {ArrowRight} from '@phosphor-icons/react';
+import './style.scss';
+import {ArrowRightIcon} from '@phosphor-icons/react';
 import {useScrollHider} from '../../hooks/scroll-observer.ts';
 
 export interface CourseType {
@@ -81,7 +81,7 @@ export function Courses() {
               <h3 className={'course__price'}>{course.price}</h3>
             </div>
             <a className={'course__button'}>
-              <p style={{paddingRight: '0.5rem'}}>{'Подробнее'}</p><ArrowRight size={24} className={'course__button_icon'}/>
+              <p style={{paddingRight: '0.5rem'}}>{'Подробнее'}</p><ArrowRightIcon size={24} className={'course__button_icon'}/>
             </a>
           </div>
 

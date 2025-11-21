@@ -1,0 +1,18 @@
+.yMap {
+  position: relative;
+  flex-shrink: 0;
+  width: 33%;
+  height: 400px;
+}
+
+@media (max-width: 1500px) {
+  .yMap {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .yMap {
+    width: 100%;
+  }
+}

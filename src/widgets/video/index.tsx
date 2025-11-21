@@ -1,4 +1,4 @@
-import './style.scss'
+import './style.scss';
 import {PauseIcon, PlayCircleIcon, SpeakerSimpleHighIcon, SpeakerSimpleSlashIcon} from '@phosphor-icons/react';
 import {useEffect, useRef, useState} from 'react';
 import {useScrollHider} from '../../hooks/scroll-observer.ts';

@@ -1,0 +1,69 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem;
+  background-color: var(--section-color-pink);
+
+  &__info {
+    padding: 2.5rem;
+  }
+
+  &__logo {
+    &_title {
+      position: relative;
+      font-family: serif;
+      letter-spacing: 0.2rem;
+      word-spacing: 1rem;
+      white-space: nowrap;
+    }
+    &_description {
+      position: relative;
+      letter-spacing: 0.2rem;
+      word-spacing: 0.5rem;
+    }
+  }
+
+  &__address {
+    padding: 2rem 0 1rem;
+  }
+
+  &__social-media {
+    display: flex;
+    gap: 0.3rem;
+    padding: 0.75rem 0;
+
+    &_item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+      border-bottom: 0.15rem solid transparent;
+      color: var(--text-additional-color);
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.04);
+        border-bottom: 0.15rem solid var(--hover-color);
+
+      }
+
+      &:active {
+        border-bottom: 0.15rem solid var(--hover-color);
+        color: var(--hover-color);
+        transform: scale(0.97);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    flex-direction: column;
+  }
+}

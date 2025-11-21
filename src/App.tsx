@@ -3,6 +3,7 @@ import {VideoSection} from './widgets/video';
 import {Separator} from './widgets/separator';
 import {Courses} from './widgets/courses';
 import Accordions from './widgets/accordion';
+import {Contacts} from './widgets/contacts';
 
 function App() {
   return <div style={{position:'relative', backgroundColor:  'var(--bg-color)', zIndex: 2}}>
@@ -17,6 +18,8 @@ function App() {
     <Courses/>
     <Separator title={'Вопросы и ответы'}/>
     <Accordions/>
+    <Separator title={'Контакты'}/>
+    <Contacts/>
     {/*<InfoSection/>*/}
 
     {/*<h1>Главный заголовок</h1>*/}
