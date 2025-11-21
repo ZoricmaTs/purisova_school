@@ -7,6 +7,16 @@
   height: 100%;
   padding: 2.5rem;
   background-color: var(--section-color-pink);
+  color: var(--text-color);
+
+  &__copyright {
+    color: var(--text-additional-color);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    top: 69px;
+    right: 21px;
+  }
 
   &__info {
     padding: 2.5rem;
@@ -62,8 +72,28 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .contacts {
+    &__copyright {
+      right: 7px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contacts {
+    &__copyright {
+      right: 7px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .contacts {
     flex-direction: column;
+
+    //&__copyright {
+    //
+    //}
   }
 }

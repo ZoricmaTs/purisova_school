@@ -31,6 +31,7 @@ export function Contacts() {
   const rootRef = useScrollHider<HTMLDivElement>();
 
   return <section className={'contacts'} ref={rootRef}>
+    <span className={'contacts__copyright'}>{'©FRISS SCHOOL 2025'}</span>
     <YMap/>
     <div className={'contacts__info'}>
       <h2 className={'contacts__logo_title'}>{'FRISS SCHOOL'}</h2>
