@@ -4,6 +4,7 @@ import {Separator} from './widgets/separator';
 import {Courses} from './widgets/courses';
 import Accordions from './widgets/accordion';
 import {Contacts} from './widgets/contacts';
+import {WhatsAppWidget} from './widgets/whatsApp';
 
 function App() {
   return <div style={{position:'relative', backgroundColor:  'var(--bg-color)', zIndex: 2}}>
@@ -20,6 +21,7 @@ function App() {
     <Accordions/>
     <Separator title={'Контакты'}/>
     <Contacts/>
+    <WhatsAppWidget/>
     {/*<InfoSection/>*/}
 
     {/*<h1>Главный заголовок</h1>*/}

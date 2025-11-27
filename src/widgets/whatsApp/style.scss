@@ -1,0 +1,36 @@
+.whatsapp-widget {
+  z-index: 9;
+  position: fixed;
+  cursor: pointer;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  color: var(--text-additional-color);
+
+  transition: transform 0.2s ease;
+  animation: pulse 2.5s linear infinite;
+
+  &:hover {
+    transform: scale(1.04);
+    color: var(--hover-color-dark);
+  }
+
+  &:active {
+    animation-play-state: paused;
+    color: var(--hover-color-dark);
+    transform: scale(0.97);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+}

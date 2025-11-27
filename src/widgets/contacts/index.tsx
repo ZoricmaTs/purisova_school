@@ -41,7 +41,13 @@ export function Contacts() {
 
       <div className={'contacts__social-media'}>
         {socialMedia.map((item, index) => {
-          return <a className={'contacts__social-media_item'} href={item.href} key={`social-media-${index}`}>
+          return <a
+            className={'contacts__social-media_item'}
+            href={item.href}
+            key={`social-media-${index}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {item.node}
           </a>;
         })}

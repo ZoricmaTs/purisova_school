@@ -66,6 +66,7 @@ export function Courses() {
     {courses.map((course: CourseType, index: number) => {
       return <div className={'course'} key={`course-${index}`}>
         <div className={'course__image-container'}>
+          <div className={'course__image-cover'}></div>
           <div className={'course__image'} style={{backgroundImage: `url(${course.img})`}} />
         </div>
 
