@@ -7,7 +7,12 @@ export function YMap() {
   const mapRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (document.getElementById("yandex-maps-script")) {
+      return;
+    }
+
     const script = document.createElement("script");
+    script.id = "yandex-maps-script";
     script.src = "https://api-maps.yandex.ru/2.1/?lang=ru_RU";
     script.onload = () => {
       // @ts-ignore
@@ -27,5 +32,5 @@ export function YMap() {
     document.body.appendChild(script);
   }, []);
 
-  return <div className={'yMap'} ref={mapRef} />;
+  return <div className={'yMap'} ref={mapRef}/>;
 }
