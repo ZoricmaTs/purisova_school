@@ -38,6 +38,7 @@ export function Contacts() {
       <small className={'contacts__logo_description'}>{'школа кройки и шитья'}</small>
       <p className={'contacts__address'}>{'720055, Кыргызская Республика, г.Бишкек, ул.Байтик-Батыра, д. 34/5'}</p>
       <p>{'Телефон: +996 504 362 514'}</p>
+      <p>{'Время работы: пн-сб 09:00-19:00'}</p>
 
       <div className={'contacts__social-media'}>
         {socialMedia.map((item, index) => {
