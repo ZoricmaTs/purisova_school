@@ -1,5 +1,5 @@
 import './style.scss';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 export interface NavbarItem {
   id: number,
@@ -11,27 +11,27 @@ const navbarItems: NavbarItem[] = [
   {
     id: 0,
     title: 'Курсы',
-    action: () => console.log('sd')
+    action: () => console.log('sd'),
   },
   {
     id: 1,
     title: 'Услуги',
-    action: () => console.log('sd')
+    action: () => console.log('sd'),
   },
   {
     id: 2,
     title: 'Расписание занятий',
-    action: () => console.log('sd')
+    action: () => console.log('sd'),
   },
   {
     id: 3,
     title: 'Видео-курсы',
-    action: () => console.log('sd')
+    action: () => console.log('sd'),
   },
   {
     id: 4,
     title: 'Отзывы',
-    action: () => console.log('sd')
+    action: () => console.log('sd'),
   },
   // {
   //   id: 5,
@@ -41,12 +41,20 @@ const navbarItems: NavbarItem[] = [
   {
     id: 6,
     title: 'Контакты',
-    action: () => console.log('sd')
+    action: () => console.log('sd'),
   },
 ];
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen])
 
   return <nav className={'navbar'}>
     <nav className={'navbar__container'}>
@@ -60,12 +68,12 @@ export function Navbar() {
         className={`navbar__hamburger ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span />
-        <span />
-        <span />
+        <span/>
+        <span/>
+        <span/>
       </button>
     </nav>
-    <ul className={`navbar__links ${isOpen ? "active" : ""}`}>
+    <ul className={`navbar__links ${isOpen ? 'active' : ''}`}>
       {navbarItems.map((item: NavbarItem) => {
         return <li key={`navbar-${item.id}`}>
           <a href="#courses">
