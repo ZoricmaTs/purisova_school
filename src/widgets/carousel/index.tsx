@@ -23,6 +23,7 @@ export function Carousel({items}: {items: string[]}) {
         return <div
           className={`carousel__item ${activeIndex == index ? '_active' : ''}`}
           style={{backgroundImage: `url(images/students/${item})`, backgroundPosition: 'center', backgroundSize: 'cover'}}
+          onClick={() => setActiveIndex(index)}
         >
         </div>
       })}
@@ -42,8 +43,7 @@ export function Carousel({items}: {items: string[]}) {
           return;
         }
         setActiveIndex(activeIndex - 1);
-
       }}/>
     </div>}
-  </div>
+  </div>;
 }

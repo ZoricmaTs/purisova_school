@@ -2,10 +2,15 @@ import './style.scss';
 import {useEffect, useState} from 'react';
 
 export interface NavbarItem {
-  id: number,
+  id: number | string,
   title: string,
   action: () => void,
 }
+
+const scrollToId = (id: string) => {
+  const el = document.getElementById(id);
+  el?.scrollIntoView({ behavior: "smooth" });
+};
 
 const navbarItems: NavbarItem[] = [
   {
@@ -13,11 +18,11 @@ const navbarItems: NavbarItem[] = [
     title: 'Курсы',
     action: () => console.log('sd'),
   },
-  {
-    id: 1,
-    title: 'Услуги',
-    action: () => console.log('sd'),
-  },
+  // {
+  //   id: 1,
+  //   title: 'Услуги',
+  //   action: () => console.log('sd'),
+  // },
   {
     id: 2,
     title: 'Расписание занятий',
@@ -39,9 +44,9 @@ const navbarItems: NavbarItem[] = [
   //   action: () => console.log('sd')
   // },
   {
-    id: 6,
+    id: 'contacts-view',
     title: 'Контакты',
-    action: () => console.log('sd'),
+    action: () => scrollToId('contacts-view'),
   },
 ];
 
@@ -54,7 +59,9 @@ export function Navbar() {
     return () => {
       document.body.style.overflow = '';
     };
-  }, [isOpen])
+  }, [isOpen]);
+
+
 
   return <nav className={'navbar'}>
     <nav className={'navbar__container'}>
@@ -76,9 +83,9 @@ export function Navbar() {
     <ul className={`navbar__links ${isOpen ? 'active' : ''}`}>
       {navbarItems.map((item: NavbarItem) => {
         return <li key={`navbar-${item.id}`}>
-          <a href="#courses">
+          <button onClick={item.action}>
             <p>{item.title}</p>
-          </a>
+          </button>
         </li>
       })}
     </ul>

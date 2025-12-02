@@ -1,0 +1,42 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: var(--bg-color);
+  padding: 3rem 4rem;
+  min-width: 300px;
+  max-width: 90vw;
+  color: var(--text-color);
+}
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modal-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: var(--hover-color);
+    transform: scale(1.04);
+  }
+
+  &:active {
+    color: var(--hover-color);
+    transform: scale(0.97);
+  }
+}

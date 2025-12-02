@@ -12,6 +12,7 @@
     border: 0.15rem solid var(--text-color);
     padding: 0.15rem;
     background-color: var(--text-color);
+    cursor: pointer;
 
     svg {
       fill: var(--bg-color);
@@ -43,5 +44,124 @@
       transform: scale(1);
       filter: blur(0px);
     }
+  }
+}
+
+.section-review {
+  background-color: var(--section-color-pink);
+  height: 100%;
+  margin: 2rem 0 4rem;
+}
+
+.carousel-review {
+  position: relative;
+  height: 25.25rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3.5rem;
+
+  &__arrow {
+    display: flex;
+    align-items: center;
+    border-radius: 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 0.15rem solid var(--text-color);
+    padding: 0.15rem;
+    background-color: var(--text-color);
+    cursor: pointer;
+
+    svg {
+      fill: var(--bg-color);
+    }
+  }
+
+  &__wrapper {
+    position: absolute;
+    display: flex;
+    transition: left 0.3s;
+    height: 20.75rem;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    height: 18.75rem;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    transition: background-color .3s;
+    cursor: pointer;
+
+
+    &._active {
+      background-color: var(--hover-color);
+      filter: brightness(1);
+      color: var(--bg-color);
+    }
+  }
+  &__item._active .carousel-review__button {
+    color: var(--bg-color);
+  }
+
+  &__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.15rem solid transparent;
+    color: var(--text-color);
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 0.15rem solid var(--hover-color);
+      transform: scale(1.04);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &_icon {
+      display: inline-flex;
+      transition: transform 0.3s ease;
+    }
+  }
+  &__item._active .carousel-review__button:hover {
+    border-bottom: 0.15rem solid var(--bg-color);
+  }
+
+  &__button:hover .carousel-review__button-icon {
+    transform: rotate(300deg);
+  }
+
+  &__item h4 {
+    padding: 0.5rem 0;
+  }
+  &__item p {
+    padding: 0.4rem 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+}
+
+.review-modal {
+  &__header {
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  &__title {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  &__description {
+    margin-top: 2rem;
+    margin-bottom: 0.25rem;
   }
 }
