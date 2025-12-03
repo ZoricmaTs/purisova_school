@@ -2,6 +2,7 @@
   height: 65vh;
   position: relative;
   margin: 2rem 0 4rem;
+  overflow: hidden;
 
   &__arrow {
     display: flex;
@@ -58,6 +59,7 @@
   height: 25.25rem;
   padding-top: 2.5rem;
   padding-bottom: 3.5rem;
+  overflow: hidden;
 
   &__arrow {
     display: flex;
