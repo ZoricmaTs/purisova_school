@@ -13,7 +13,15 @@
   padding: 3rem 4rem;
   min-width: 300px;
   max-width: 90vw;
+  max-height: 90vh;
   color: var(--text-color);
+  overflow: scroll;
+}
+
+.modal-header {
+  color: var(--text-color);
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .modal-wrapper {

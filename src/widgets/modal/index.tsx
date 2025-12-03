@@ -6,10 +6,10 @@ type ModalProps = {
   open: boolean;
   onClose: () => void;
   children: ReactNode;
+  title?: string,
 };
 
-export function Modal({ open, onClose, children }: ModalProps) {
-  // Закрытие по ESC
+export function Modal({ open, onClose, children, title }: ModalProps) {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -21,6 +21,14 @@ export function Modal({ open, onClose, children }: ModalProps) {
 
     return () => document.removeEventListener("keydown", handler);
   }, [onClose]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
 
   if (!open) {
     return null;
@@ -36,6 +44,7 @@ export function Modal({ open, onClose, children }: ModalProps) {
           className="modal-content"
           onClick={(e) => e.stopPropagation()}
         >
+          {title && <h2 className={'modal-header'}>{title}</h2>}
           {children}
         </div>
         <button className="modal-button"><XIcon size={32} /></button>

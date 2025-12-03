@@ -102,8 +102,7 @@ export function CarouselReviews({items}: {items: CarouselItem[]}) {
       }}/>
     </div>}
   </div>
-    <Modal open={open} onClose={() => setOpen(false)}>
-      <h2 className={'review-modal__header'}>{'Отзыв'}</h2>
+    <Modal open={open} onClose={() => setOpen(false)} title={'Отзыв'}>
       <h3 className={'review-modal__title'}>{items[activeIndex].title}</h3>
       {items[activeIndex].date && <small className={'review-modal__date'}>{items[activeIndex].date}</small>}
       <p className={'review-modal__description'}>{items[activeIndex].description}</p>
